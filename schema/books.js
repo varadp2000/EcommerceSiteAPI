@@ -9,7 +9,7 @@ const bookSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  author: {
+  auther: {
     type: String,
     required: true,
   },
@@ -17,6 +17,11 @@ const bookSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  edition: {
+    type: String,
+    required: true,
+  },
+  category: [{ type: String }],
 });
 
-module.exports = mongoose.model("book", userSchema);
+module.exports = mongoose.model("book", bookSchema);
